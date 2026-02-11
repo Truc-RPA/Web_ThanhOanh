@@ -43,39 +43,50 @@ const Home = () => {
     return (
         <div className="space-y-0">
             {/* Hero Banner */}
-            <section className="relative h-[80vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gray-900">
+            <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-gray-900">
                 {/* Background Image Overlay */}
                 <div className="absolute inset-0 z-0">
-                    <img
+                    <motion.img
+                        initial={{ scale: 1.1 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
                         src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000&auto=format&fit=crop"
                         alt="Farm and Rice Field"
-                        className="w-full h-full object-cover opacity-50"
+                        className="w-full h-full object-cover opacity-40"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent" />
                 </div>
 
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+                        <motion.span
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.2 }}
+                            className="inline-block py-1 px-3 rounded-full bg-green-500/20 text-green-400 font-semibold mb-4 border border-green-500/30"
+                        >
+                            Đồng hành cùng nhà nông Việt
+                        </motion.span>
+                        <h1 className="text-4xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
                             Giải pháp Chăn nuôi & <br />
-                            <span className="text-green-500">Nông nghiệp Bền vững</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">Nông nghiệp Bền vững</span>
                         </h1>
-                        <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10">
-                            Công ty TNHH Thanh Oanh đồng hành cùng nhà nông với các sản phẩm Cám EH và Tinh heo chất lượng cao.
+                        <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                            Công ty TNHH Thanh Oanh cam kết mang đến những sản phẩm Cám EH và Tinh heo chất lượng cao nhất, giúp bà con làm giàu từ chính mảnh đất quê hương.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link to="/lien-he">
-                                <Button size="lg" className="w-full sm:w-auto font-bold shadow-lg shadow-green-900/20">
+                                <Button size="lg" className="w-full sm:w-auto font-bold shadow-xl shadow-green-600/20 hover:shadow-green-500/30">
                                     Liên hệ Tư vấn Ngay
                                     <ArrowRight className="ml-2" />
                                 </Button>
                             </Link>
                             <Link to="/san-pham">
-                                <Button variant="secondary" size="lg" className="w-full sm:w-auto font-bold bg-white/10 text-white border-white/20 hover:bg-white hover:text-green-700">
+                                <Button variant="secondary" size="lg" className="w-full sm:w-auto font-bold bg-white/5 text-white border-white/10 hover:bg-white hover:text-green-800 backdrop-blur-sm">
                                     Xem Sản Phẩm
                                 </Button>
                             </Link>
@@ -166,17 +177,21 @@ const Home = () => {
                     <p className="text-green-50 text-xl max-w-2xl mx-auto mb-10">
                         Đội ngũ chuyên gia của Thanh Oanh luôn sẵn sàng hỗ trợ bà con 24/7. Hãy liên hệ ngay để được giải đáp thắc mắc.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <Link to="/lien-he">
-                            <Button variant="secondary" size="lg" className="font-bold shadow-lg">
+                            <Button variant="secondary" size="lg" className="font-bold shadow-xl hover:shadow-2xl min-w-[200px]">
                                 Gửi yêu cầu tư vấn
                             </Button>
                         </Link>
-                        <a href="tel:0985747456">
-                            <Button className="bg-green-700 text-white border-green-500 hover:bg-green-800 w-full sm:w-auto" size="lg">
-                                Gọi ngay: 0985.747.456
+                        <motion.a
+                            href="tel:0985747456"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <Button className="bg-green-700 text-white border-green-500 hover:bg-green-800 w-full sm:w-auto shadow-xl min-w-[200px]" size="lg">
+                                <span className="animate-pulse mr-2">📞</span> Gọi ngay: 0985.747.456
                             </Button>
-                        </a>
+                        </motion.a>
                     </div>
                 </div>
             </section>

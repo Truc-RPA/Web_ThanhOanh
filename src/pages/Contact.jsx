@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Button from '../components/Button';
 
 const Contact = () => {
@@ -28,10 +29,14 @@ const Contact = () => {
             <div className="container mx-auto px-4 py-16">
                 <div className="grid lg:grid-cols-2 gap-12">
                     {/* Contact Info */}
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
                         <h2 className="text-2xl font-bold text-gray-900 mb-6">Thông tin liên lạc</h2>
                         <div className="space-y-8">
-                            <div className="flex items-start gap-4">
+                            <div className="flex items-start gap-4 hover:bg-green-50 p-4 rounded-xl transition-colors">
                                 <div className="bg-green-100 p-3 rounded-full text-green-600">
                                     <MapPin size={24} />
                                 </div>
@@ -42,7 +47,7 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                            <div className="flex items-start gap-4">
+                            <div className="flex items-start gap-4 hover:bg-green-50 p-4 rounded-xl transition-colors">
                                 <div className="bg-green-100 p-3 rounded-full text-green-600">
                                     <Phone size={24} />
                                 </div>
@@ -53,7 +58,7 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                            <div className="flex items-start gap-4">
+                            <div className="flex items-start gap-4 hover:bg-green-50 p-4 rounded-xl transition-colors">
                                 <div className="bg-green-100 p-3 rounded-full text-green-600">
                                     <Mail size={24} />
                                 </div>
@@ -63,7 +68,7 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                            <div className="flex items-start gap-4">
+                            <div className="flex items-start gap-4 hover:bg-green-50 p-4 rounded-xl transition-colors">
                                 <div className="bg-green-100 p-3 rounded-full text-green-600">
                                     <Clock size={24} />
                                 </div>
@@ -76,7 +81,7 @@ const Contact = () => {
                         </div>
 
                         {/* Google Map Placeholder */}
-                        <div className="mt-8 h-64 bg-gray-200 rounded-xl overflow-hidden relative">
+                        <div className="mt-8 h-64 bg-gray-200 rounded-xl overflow-hidden relative shadow-md">
                             <div className="absolute inset-0 flex items-center justify-center text-gray-500 font-medium">
                                 Google Maps Area
                             </div>
@@ -92,10 +97,15 @@ const Contact = () => {
                                 className="opacity-70 hover:opacity-100 transition-opacity"
                             ></iframe>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Contact Form */}
-                    <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm"
+                    >
                         <h2 className="text-2xl font-bold text-gray-900 mb-6">Gửi thắc mắc cho chúng tôi</h2>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
@@ -149,7 +159,7 @@ const Contact = () => {
                                 {formStatus === 'idle' && <Send size={18} className="ml-2" />}
                             </Button>
                         </form>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>

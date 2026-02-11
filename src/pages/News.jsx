@@ -1,5 +1,6 @@
 import React from 'react';
 import { news } from '../data/news';
+import { motion } from 'framer-motion';
 import { Calendar, Tag, ArrowRight } from 'lucide-react';
 import Button from '../components/Button';
 import { Link } from 'react-router-dom';
@@ -19,16 +20,23 @@ const News = () => {
 
             <div className="container mx-auto px-4 mt-12">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {news.map((item) => (
-                        <div key={item.id} className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100 overflow-hidden flex flex-col h-full">
+                    {news.map((item, idx) => (
+                        <motion.div
+                            key={item.id}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: idx * 0.1 }}
+                            className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col h-full group"
+                        >
                             <div className="h-48 overflow-hidden relative">
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                 />
                                 <div className="absolute top-4 left-4">
-                                    <span className="bg-white/90 backdrop-blur-sm text-green-700 text-xs font-bold px-3 py-1 rounded-full uppercase">
+                                    <span className="bg-white/95 backdrop-blur-sm text-green-700 text-xs font-bold px-3 py-1 rounded-full uppercase shadow-sm">
                                         {item.category}
                                     </span>
                                 </div>
@@ -38,7 +46,7 @@ const News = () => {
                                     <Calendar size={14} />
                                     <span>{item.date}</span>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-green-600 transition-colors cursor-pointer">
+                                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors cursor-pointer">
                                     {item.title}
                                 </h3>
                                 <p className="text-gray-600 text-sm line-clamp-3 mb-6 flex-grow">
@@ -46,11 +54,11 @@ const News = () => {
                                 </p>
                                 <Link to="#">
                                     <Button variant="ghost" size="sm" className="pl-0 text-green-600 hover:bg-transparent hover:text-green-700 hover:underline">
-                                        Đọc tiếp <ArrowRight size={16} className="ml-1" />
+                                        Đọc tiếp <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
                                     </Button>
                                 </Link>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

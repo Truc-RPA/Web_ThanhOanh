@@ -58,20 +58,16 @@ const Products = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.3 }}
+                                className="h-full"
                             >
-                                <div className="h-full bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100 p-4">
-                                    {/* Reuse card logic but tailored for list view if needed, or just ProductCard */}
-                                    <ProductCard
-                                        title={product.name}
-                                        category={product.category}
-                                        description={product.description}
-                                        image={product.image}
-                                    // Price could be added to ProductCard or shown here.
-                                    // Let's stick to ProductCard for consistency.
-                                    />
-                                    <div className="mt-4 px-2 flex justify-between items-center">
-                                        <span className="text-green-700 font-bold text-lg">{product.price}</span>
-                                    </div>
+                                <ProductCard
+                                    title={product.name}
+                                    category={product.category}
+                                    description={product.description}
+                                    image={product.image}
+                                />
+                                <div className="mt-3 px-2 flex justify-between items-center">
+                                    <span className="text-green-700 font-bold text-lg bg-green-50 px-3 py-1 rounded-lg">{product.price}</span>
                                 </div>
                             </motion.div>
                         ))}
