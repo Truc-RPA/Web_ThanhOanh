@@ -37,7 +37,7 @@ const About = () => {
                             Thành lập từ năm 2012, Công ty TNHH Thanh Oanh khởi đầu là một đại lý nhỏ cung cấp thức ăn chăn nuôi tại địa phương. Thấu hiểu những khó khăn của bà con nông dân trong việc tìm kiếm nguồn vật tư nông nghiệp uy tín, chúng tôi đã không ngừng mở rộng và phát triển.
                         </p>
                         <p className="text-gray-600 mb-4 leading-relaxed">
-                            Đến nay, Thanh Oanh tự hào là nhà phân phối chính thức các dòng sản phẩm **Cám EH**, thuốc bảo vệ thực vật và tinh heo giống chất lượng cao, phục vụ hàng ngàn hộ chăn nuôi và trang trại trên khắp cả nước.
+                            Đến nay, Thanh Oanh tự hào là nhà phân phối chính thức các dòng sản phẩm **Cám EH** và tinh heo giống chất lượng cao, phục vụ hàng ngàn hộ chăn nuôi và trang trại trên khắp cả nước.
                         </p>
                         <div className="flex gap-4 mt-8">
                             <div className="text-center">

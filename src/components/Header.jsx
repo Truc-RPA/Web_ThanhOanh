@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
 import { clsx } from 'clsx';
 import Button from './Button';
+import logo from '../assets/logo.png';
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,13 +28,7 @@ const Header = () => {
                 <div className="flex justify-between items-center h-20">
                     {/* Logo */}
                     <Link to="/" className="flex items-center space-x-2">
-                        <div className="bg-green-600 p-2 rounded-lg">
-                            <span className="text-white font-bold text-xl">TO</span>
-                        </div>
-                        <div>
-                            <h1 className="text-xl font-bold text-green-800 uppercase leading-none">Thanh Oanh</h1>
-                            <span className="text-xs text-green-600 font-medium tracking-wider">Nông nghiệp bền vững</span>
-                        </div>
+                        <img src={logo} alt="Thanh Oanh Logo" className="h-16 w-auto object-contain" />
                     </Link>
 
                     {/* Desktop Navigation */}

@@ -7,7 +7,7 @@ import { Filter } from 'lucide-react';
 const Products = () => {
     const [activeCategory, setActiveCategory] = useState('Tất cả');
 
-    const categories = ['Tất cả', 'Cám EH', 'Thuốc trừ sâu', 'Tinh heo'];
+    const categories = ['Tất cả', 'Cám EH', 'Tinh heo'];
 
     const filteredProducts = activeCategory === 'Tất cả'
         ? products
@@ -34,8 +34,8 @@ const Products = () => {
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
                                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${activeCategory === cat
-                                        ? 'bg-green-600 text-white shadow-md'
-                                        : 'bg-white text-gray-600 hover:bg-green-50'
+                                    ? 'bg-green-600 text-white shadow-md'
+                                    : 'bg-white text-gray-600 hover:bg-green-50'
                                     }`}
                             >
                                 {cat}

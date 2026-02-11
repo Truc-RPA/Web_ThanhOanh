@@ -130,7 +130,7 @@ const Contact = () => {
                                 <label className="block text-sm font-medium text-gray-700 mb-2">Chủ đề cần tư vấn</label>
                                 <select className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all bg-white">
                                     <option>Tư vấn Cám EH</option>
-                                    <option>Tư vấn Thuốc trừ sâu</option>
+
                                     <option>Tư vấn Tinh heo giống</option>
                                     <option>Khác</option>
                                 </select>

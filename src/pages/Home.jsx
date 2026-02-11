@@ -31,12 +31,7 @@ const Home = () => {
             description: "Dòng sản phẩm cám EH cung cấp đầy đủ dinh dưỡng, giúp vật nuôi tăng trưởng nhanh, khỏe mạnh và đạt năng suất tối đa.",
             image: "https://images.unsplash.com/photo-1605000797499-95a05354507e?q=80&w=600&auto=format&fit=crop" // Placeholder unsplash
         },
-        {
-            title: "Thuốc Trừ Sâu An Toàn",
-            category: "Bảo vệ thực vật",
-            description: "Các loại thuốc đặc trị sâu bệnh hiệu quả, ít độc hại, đảm bảo thời gian cách ly và an toàn cho nông sản.",
-            image: "https://images.unsplash.com/photo-1595856450090-3b8a87717a5d?q=80&w=600&auto=format&fit=crop"
-        },
+
         {
             title: "Tinh Heo Giống Chuẩn",
             category: "Chăn nuôi",
@@ -70,7 +65,7 @@ const Home = () => {
                             <span className="text-green-500">Nông nghiệp Bền vững</span>
                         </h1>
                         <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10">
-                            Công ty TNHH Thanh Oanh đồng hành cùng nhà nông với các sản phẩm Cám EH, Thuốc trừ sâu và Tinh heo chất lượng cao.
+                            Công ty TNHH Thanh Oanh đồng hành cùng nhà nông với các sản phẩm Cám EH và Tinh heo chất lượng cao.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link to="/lien-he">

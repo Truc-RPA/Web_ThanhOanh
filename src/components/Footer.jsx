@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Facebook } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const Footer = () => {
     return (
@@ -10,16 +11,10 @@ const Footer = () => {
                     {/* Company Info */}
                     <div>
                         <div className="flex items-center space-x-2 mb-4">
-                            <div className="bg-green-600 p-2 rounded-lg">
-                                <span className="text-white font-bold text-xl">TO</span>
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-bold uppercase leading-none">Thanh Oanh</h3>
-                                <span className="text-xs text-gray-400">Nông nghiệp bền vững</span>
-                            </div>
+                            <img src={logo} alt="Thanh Oanh Logo" className="h-20 w-auto object-contain bg-white rounded-lg p-1" />
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                            Chuyên cung cấp cám EH, thuốc trừ sâu và tinh heo chất lượng cao. Đồng hành cùng nhà nông vươn tới thành công.
+                            Chuyên cung cấp cám EH và tinh heo chất lượng cao. Đồng hành cùng nhà nông vươn tới thành công.
                         </p>
                     </div>
 

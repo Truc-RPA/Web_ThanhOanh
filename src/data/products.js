@@ -23,22 +23,7 @@ export const products = [
         image: "https://images.unsplash.com/photo-1627483262268-9c96d8e360c7?q=80&w=600&auto=format&fit=crop",
         price: "Liên hệ"
     },
-    {
-        id: 4,
-        name: "Thuốc trừ sâu Bio-Clean",
-        category: "Thuốc trừ sâu",
-        description: "Chế phẩm sinh học đặc trị sâu cuốn lá, sâu đục thân. An toàn cho thiên địch và môi trường.",
-        image: "https://images.unsplash.com/photo-1595856450090-3b8a87717a5d?q=80&w=600&auto=format&fit=crop",
-        price: "150.000đ"
-    },
-    {
-        id: 5,
-        name: "Thuốc trừ cỏ SuperFast",
-        category: "Thuốc trừ sâu",
-        description: "Diệt sạch các loại cỏ dại cứng đầu trong vườn cây ăn trái, ruộng lúa. Hiệu quả nhanh, lưu dẫn mạnh.",
-        image: "https://images.unsplash.com/photo-1585314062604-1a357de8b000?q=80&w=600&auto=format&fit=crop",
-        price: "120.000đ"
-    },
+
     {
         id: 6,
         name: "Tinh Heo Duroc Mỹ",
